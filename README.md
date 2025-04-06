@@ -2,6 +2,7 @@
 # Personal Assistant
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 
@@ -26,7 +27,7 @@ The Personal Assistant project enables users to control a system by sending comm
 - Control a system using a Flutter app.
 - Enter the IP address of the system to connect.
 - Send commands to the system from the mobile app.
-- Python backend to process and execute commands on the laptop.
+- Flask backend to process and execute commands on the laptop.
 - Commands include:
   - Opening and closing applications.
   - Taking screenshots.
@@ -93,7 +94,7 @@ The Personal Assistant project enables users to control a system by sending comm
 ## Technologies Used
 
 - **Dart**: Used for building the Flutter app.
-- **Python**: Used for the backend to process and execute commands.
+- **Python**: Used for the backend flask to process and execute commands.
 - **HTML, CSS, JavaScript**: Other technologies used in the project.
 
 
