@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Veera - Voice Assistant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1e1e1e;
+            color: white;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        input {
+            width: 300px;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Veera - Voice Assistant</h1>
+    <input type="text" id="commandInput" placeholder="Enter your command">
+    <button onclick="sendCommand()">Execute</button>
+    <button onclick="startVoiceRecognition()">🎤 Voice Input</button>
+    <p id="responseText"></p>
+
+    <script>
+        function sendCommand() {
+            let command = document.getElementById("commandInput").value;
+            fetch("/execute", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ command: command })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("responseText").innerText = data.response;
+            });
+        }
+
+        function startVoiceRecognition() {
+            let recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.lang = "en-US";
+            recognition.start();
+
+            recognition.onresult = function(event) {
+                let command = event.results[0][0].transcript;
+                document.getElementById("commandInput").value = command;
+                sendCommand(); // Auto send after voice input
+            };
+        }
+    </script>
+</body>
+</html>
