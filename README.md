@@ -5,7 +5,7 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 
-This project is a system control application that allows users to control a system by entering the IP address of the system from a Flutter app and sending commands. The mobile device and the laptop should be on the same network. The Python backend runs on the laptop.
+This project is a system control application that allows users to control a system by entering the IP address of the system from a Flutter app and sending commands. The mobile device and the laptop should be on the same network. The Python backend runs on the laptop or you can control via web app.
 
 ## Table of Contents
 - [Description](#description)
@@ -94,7 +94,7 @@ The Personal Assistant project enables users to control a system by sending comm
 
 - **Dart**: Used for building the Flutter app.
 - **Python**: Used for the backend to process and execute commands.
-- **HTML, CSS, JavaScript: Other technologies used in the project.
+- **HTML, CSS, JavaScript**: Other technologies used in the project.
 
 
 ## License
